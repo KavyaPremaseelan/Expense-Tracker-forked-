@@ -13,6 +13,7 @@ let db
 connectToDb(function(error) {
     if(!error) {
         // Starting the server
+        const port = process.env.PORT || 2024
         app.listen(2024)
         console.log('Listening on port 2024...')
         db = getDb()
